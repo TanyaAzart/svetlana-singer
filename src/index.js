@@ -35,6 +35,25 @@ app.get('/blog', (req, res)=>{
     })
 })
 
+app.get('/school', (req, res)=>{
+    res.render('school', {
+        title: 'School'
+    })
+})
+
+app.get('/gallery', (req, res)=>{
+    res.render('gallery', {
+        title: 'Gallery'
+    })
+
+})
+
+app.get('/contacts', (req, res)=>{
+    res.render('contacts', {
+        title: 'Contacts'
+    })
+})
+
 app.get('*', (req, res)=>{
     res.render('404', {
         title: '404 page',
