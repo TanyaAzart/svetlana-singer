@@ -2,6 +2,8 @@ const express = require('express')
 const hbs = require('hbs')
 const path = require('path')
 require ('./db/mongoose')
+const pagesRouter = require('./routers/pages')
+const postRouter = require('./routers/post')
 
 
 const app = express()
@@ -22,44 +24,8 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirPath));
 
-app.get('', (req, res)=>{
-    res.render('index', {
-        title: 'Svetlana Kharlamova',
-        
-    })
-})
-
-app.get('/blog', (req, res)=>{
-    res.render('blog', {
-        title: 'Blog'
-    })
-})
-
-app.get('/school', (req, res)=>{
-    res.render('school', {
-        title: 'School'
-    })
-})
-
-app.get('/gallery', (req, res)=>{
-    res.render('gallery', {
-        title: 'Gallery'
-    })
-
-})
-
-app.get('/contacts', (req, res)=>{
-    res.render('contacts', {
-        title: 'Contacts'
-    })
-})
-
-app.get('*', (req, res)=>{
-    res.render('404', {
-        title: '404 page',
-        message: 'Page not found'
-    })
-})
+app.use(pagesRouter)
+app.use(postRouter)
 
 app.listen(port, ()=>{
     console.log("Server is on port " + port)

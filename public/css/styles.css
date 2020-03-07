@@ -33,7 +33,6 @@ h2 {
     opacity:0.4;
     background-image: url("/img/music.jpg");
     background-repeat: no-repeat;
-    /* background-position: center; */
     background-size: contain;
 }
 
@@ -85,6 +84,10 @@ header a {
     
     }
 
+footer {
+    margin-top: 10vh;
+}
+
 .footer-link {
     display:flex;
     flex-direction: row;
@@ -106,6 +109,43 @@ footer p {
     color:  rgba(62, 41, 122); 
 }
 
-.blog img {
-    width: 100vw;
+.blog-post {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 5vh auto;
+    cursor: pointer;
+    
+}
+
+.blog-post img {
+    width: 8vw;
+    margin-right: 5vw;
+
+}
+
+.blog-post h3 {
+    font-size: 2vw;
+    
+}
+.blog-post #post-date {
+    width:40vw;
+    font-size: 1.2vw;
+    text-align: right;
+    margin: auto;
+}
+.blog-post #post-title {
+     width: 40vw;
+     text-align: left;
+}
+#post-text {
+    width: 75%;
+    text-align: right;
+    margin-left: 17vw;
+    
+}
+#post-text p {
+    text-align: justify;
+    padding-bottom: 10vh;
+    border-bottom: 1px solid rgba(117, 110, 138, 0.5);    
 }
