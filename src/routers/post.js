@@ -36,7 +36,7 @@ router.get('/posts/:id', async (req, res)=>{
 
 router.patch('/posts/:id', async (req, res)=>{
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['title', 'body']
+    const allowedUpdates = ['title', 'body', 'updated']
     const updateIsValid = updates.every((update)=>allowedUpdates.includes(update))
     
     if(!updateIsValid) {

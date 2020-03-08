@@ -4,6 +4,7 @@ const path = require('path')
 require ('./db/mongoose')
 const pagesRouter = require('./routers/pages')
 const postRouter = require('./routers/post')
+const userRouter = require('./routers/user')
 
 
 const app = express()
@@ -26,6 +27,7 @@ app.use(express.static(publicDirPath));
 
 app.use(pagesRouter)
 app.use(postRouter)
+app.use(userRouter)
 
 app.listen(port, ()=>{
     console.log("Server is on port " + port)

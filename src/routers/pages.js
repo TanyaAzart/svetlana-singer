@@ -33,11 +33,6 @@ router.get('/contacts', (req, res)=>{
     })
 })
 
-router.get('*', (req, res)=>{
-    res.render('404', {
-        title: '404 page',
-        message: 'Page not found'
-    })
-})
+
 
 module.exports = router
