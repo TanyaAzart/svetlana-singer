@@ -13,11 +13,12 @@ const Blog = ({onTitleClick})=> {
             <div className='blog' key={blog.id} onClick={()=>onTitleClick(blog.id)}>
                 <Link href={`/blog/${blog.id}`}>
                 <div className="blog-post">
-                <img src={Logo} alt={''}/>
-                    <div id="post-title"><h3>{blog.title}</h3></div>
-                    <div id="post-date"> <p>опубликовано: {blog.date}</p></div>
+                    <img src={Logo} alt={''}/>
+                        <div className="post-title"><h3>{blog.title}</h3></div>
+                            <div className="post-date"> <p>опубликовано: {blog.date}</p></div>
                 </div>                
-                <div id="post-text">
+                
+                <div className="post-text">
                     <p>{blog.text}</p>
                 </div>
                 </Link>
@@ -26,11 +27,10 @@ const Blog = ({onTitleClick})=> {
     })
     
     return(               
-        <div className="container">
+        <div >
               <h1>Музыкальные заметки</h1>
                 <h2>... и прочие размышления вслух</h2>              
-                {renderedBlogs}   
-                                    
+                {renderedBlogs}                                     
         </div>  
     )   
 };

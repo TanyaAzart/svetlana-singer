@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Route from './components/Route';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,17 +8,17 @@ import BlogItem from './components/BlogItem';
 import Gallery from './components/Gallery';
 import School from './components/School';
 import Contacts from './components/Contacts';
+import Info from './components/Info';
 import './App.css'
 
 
 const App = ()=> {
 
-    const itemNumber = window.location.pathname.includes("/blog/") ? parseInt(window.location.pathname.slice(6)) : 1
+    const itemNumber = window.location.pathname.includes("/blog/") ? parseInt(window.location.pathname.slice(6)) : null
     const [currentItem, setCurrentItem] = useState(itemNumber);
       
     const onTitleClick =(id)=>{
-      setCurrentItem(id) 
-      console.log(currentItem)       
+      setCurrentItem(id);             
     };
     
 
@@ -44,7 +43,10 @@ const App = ()=> {
             <Contacts />
           </Route>
           <Route path={`/blog/${currentItem}`}>
-            <BlogItem onTitleClick={onTitleClick} currentItem={currentItem}/>
+            <BlogItem currentItem={currentItem}/>
+          </Route>
+          <Route path="/info">
+            <Info />
           </Route>
         </div>
       <Footer />

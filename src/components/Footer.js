@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = ({changePage}) => {
+const Footer = () => {
 
     return (
         <div >
@@ -10,12 +10,13 @@ const Footer = ({changePage}) => {
                     <a href="/gallery">Галерея</a>
                     <a href="/blog">Блог</a>
                     <a href="/school">Школа</a>
+                    <a href="/info">Афиша</a>
                     <a href="/contacts">Контакты</a>
                 </div>
-                <p>Created by Tanya Azart</p>      
+                    <p>Created by TanyaAzart</p>      
             </footer>
         </div>
-    )
+    );
 }
 
 export default Footer;

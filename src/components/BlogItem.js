@@ -16,22 +16,21 @@ const BlogItem = ({currentItem}) => {
     
     const Component = components[currentItem];
 
-    return (        
-
-        <div className='post'>            
-                    <div className="post-header">
-                        <h1>{item.title}</h1>
+    return (  
+            <div className='post'>            
+                <div className="post-header">
+                    <h1>{item.title}</h1>
                         <div>
                             <img src={Sveta} alt={"Author"}/>        
                             by: Svetlana Kharlamova,
                             <span>  {item.date}</span>
                         </div>
-                    </div>                       
-                        <div className="post-content">
-                            <Component />
-                        </div>           
-        </div>
-    )
+                </div>                       
+                    <div className="post-content">
+                        <Component />
+                    </div>           
+            </div>
+            )
 }
     
 export default BlogItem;
