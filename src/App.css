@@ -178,3 +178,21 @@ footer p {
 .post-content {
     text-align:justify;
 }
+
+/* MOBILE VERSION */
+
+@media (max-width: 450px) {
+
+    .main-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-portrait {         
+        margin: auto;
+    }
+    
+    .main-portrait img {
+        width: 50vw;
+    }     
+}
