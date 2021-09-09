@@ -14,7 +14,7 @@ const BlogItem = ({currentItem}) => {
     
     const item = items.find(item => item.id===currentItem);
     
-    const Component = components[currentItem];
+    const Component = components[currentItem-1];
 
     return (  
             <div className='post'>            
