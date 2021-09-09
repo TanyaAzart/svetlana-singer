@@ -1,6 +1,6 @@
 body {
     font-family: 'Gabriela', serif;
-    font-size: 1.2vw;
+    font-size: 120%;
     background-color: rgba(213, 207, 235, 0.5);
     margin: 0; 
 }
@@ -10,13 +10,18 @@ a {
 }
 
 h1 {
-    font-size: 4vw;
+    font-size: 4em;
     margin-bottom: 0px;
     margin-top: 3vh;
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 2.5em;
+    margin-top: 0px;    
+}
+
+h3 {
+    font-size: 1.5em;
     margin-top: 0px;    
 }
 
@@ -56,7 +61,7 @@ header {
 
 header a {
     border-right: rgb(102, 102, 150, 0.5) solid 1px;
-    font-size: 1.5vw;
+    font-size: 1em;
     padding: 0 5px;     
 }
 
@@ -75,17 +80,17 @@ footer {
 .footer-link {
     display:flex;
     flex-direction: row;
-    width: 60vw;
+    width: 80vw;
     margin: auto;
 }
 .footer-link a {
-    font-size: 1.5vw;
+    font-size: 0.8em;
     margin: auto;    
 }
 
 footer p {
     text-align: center;
-    font-size: 1vw;
+    font-size: 0.6em;
     margin-top: 2rem;
     font-family: 'Times New Roman', Times, serif;
     color:  rgba(62, 41, 122); 
@@ -117,37 +122,41 @@ footer p {
 
 /* BLOG */
 
+
 .blog {
     width: 80%;
     margin:auto;
+    padding-top: 6vw;
 }
 
 .blog-post {
     display: flex;
     flex-direction: row;
-    width: 80%;
-    margin: 5vh auto;
+    width: 90%;
+    margin: 2vw auto;
     cursor: pointer;    
 }
 
 .blog-post img {
-    width: 8vw;
-    margin-right: 5vw;
+    width: 10vw;
+    height: 5vw;
+    margin-right: 2vw;
 }
 
 .blog-post h3 {
-    font-size: 2vw;    
+    font-size: 1em;    
 }
 
 .post-date {
-    width:40vw;
-    font-size: 1.2vw;
+    width:30vw;
+    font-size: 0.8em;
     text-align: right;
     margin: auto;
 }
 .post-title {
      width: 40vw;
      text-align: left;
+     font-size: 1.5em;
 }
 
 .post-text {
@@ -181,7 +190,34 @@ footer p {
 
 /* MOBILE VERSION */
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
+
+    body {
+        font-size: 3vw;
+    }
+
+    header a {
+        font-size: 3vw;
+    }
+    
+    .header-menu {
+        float:none
+    }
+
+    footer {
+        margin-top: 5vh;
+    }
+
+    footer p {
+        font-size: 2vw;
+    }
+    .footer-link {
+        width: 80vw;
+    }
+
+    .footer-link a {
+        font-size: 3vw;
+    }
 
     .main-page {
         display: flex;
@@ -194,5 +230,50 @@ footer p {
     
     .main-portrait img {
         width: 50vw;
-    }     
+    }    
+    
+    /* BLOG - MOBILE */
+    .blog {
+        padding-top: 2vw;
+        width: 100%; 
+    }
+
+    .blog-post {
+        margin: 5vh auto;
+        
+    }
+    
+    .blog-post img {
+        width: 10vw;
+        margin-right: 2vw;
+    }
+    
+    .blog-post h3 {
+        font-size: 1em;    
+    }
+    
+    .post-date {
+        width:40vw;
+        font-size: 0.8em;
+        text-align: right;
+        margin: auto;
+    }
+    .post-title {
+         width: 40vw;
+         text-align: left;
+         font-size: 1.5em;
+    }
+    
+    .post-text {
+        width: 75%;
+        text-align: right;
+        margin-left: 17vw;    
+    }
+    .post-text p {
+        text-align: justify;
+        padding-bottom: 5vh;
+        border-bottom: 1px solid rgba(117, 110, 138, 0.5);    
+    }
+    
 }
+

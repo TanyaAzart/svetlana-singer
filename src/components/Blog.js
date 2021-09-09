@@ -15,7 +15,7 @@ const Blog = ({onTitleClick})=> {
                 <div className="blog-post">
                     <img src={Logo} alt={''}/>
                         <div className="post-title"><h3>{blog.title}</h3></div>
-                            <div className="post-date"> <p>опубликовано: {blog.date}</p></div>
+                            <div className="post-date"> <span>опубликовано: {blog.date}</span></div>
                 </div>                
                 
                 <div className="post-text">
@@ -27,9 +27,9 @@ const Blog = ({onTitleClick})=> {
     })
     
     return(               
-        <div >
-              <h1>Музыкальные заметки</h1>
-                <h2>... и прочие размышления вслух</h2>              
+        <div>
+              <h2 className='blog'>Музыкальные заметки</h2>
+                {/* <h3><i>... и прочие размышления вслух</i></h3>               */}
                 {renderedBlogs}                                     
         </div>  
     )   

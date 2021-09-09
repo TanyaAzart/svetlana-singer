@@ -19,7 +19,7 @@ const BlogItem = ({currentItem}) => {
     return (  
             <div className='post'>            
                 <div className="post-header">
-                    <h1>{item.title}</h1>
+                    <h2>{item.title}</h2>
                         <div>
                             <img src={Sveta} alt={"Author"}/>        
                             by: Svetlana Kharlamova,
