@@ -6,6 +6,7 @@ import MainPage from './components/MainPage';
 import Blog from './components/Blog';
 import BlogItem from './components/BlogItem';
 import Gallery from './components/Gallery';
+import Sound from './components/Sound';
 import School from './components/School';
 import Contacts from './components/Contacts';
 import Info from './components/Info';
@@ -30,11 +31,14 @@ const App = ()=> {
           <Route path="/">
             <MainPage />
           </Route>          
-          <Route path="/blog">
+          {/* <Route path="/blog">
             <Blog onTitleClick={onTitleClick}/>
-          </Route>
+          </Route> */}
           <Route path="/gallery">
             <Gallery />
+          </Route>
+          <Route path="/sound">
+            <Sound />
           </Route>
           <Route path="/school">
             <School />
